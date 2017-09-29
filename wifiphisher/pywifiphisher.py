@@ -523,7 +523,7 @@ class WifiphisherEngine:
         except (interfaces.InvalidInterfaceError,
                 interfaces.InterfaceCantBeFoundError,
                 interfaces.InterfaceManagedByNetworkManagerError) as err:
-            logger.exception("Setting {} to monitor mode".format(mon_iface))
+            logger.exception("Failed to set card to monitor mode")
             print ("[{0}!{1}] {2}").format(R, W, err)
 
             time.sleep(1)
